@@ -28,9 +28,9 @@ def copy_from_src_to_dest(origin,dest):
             copy_from_src_to_dest(from_path, dest_path)    
 
 
-def copy_src_to_dest():
-    DEST_FOLDER = './public/'
-    SOURCE_STATIC_FOLDER = './static/'
+def copy_src_to_dest(DEST_FOLDER,SOURCE_STATIC_FOLDER):
+    # DEST_FOLDER = './public/'
+    # SOURCE_STATIC_FOLDER = './static/'
     delete_all_in_dest(DEST_FOLDER)
     copy_from_src_to_dest(SOURCE_STATIC_FOLDER,DEST_FOLDER)
 
