@@ -3,6 +3,8 @@ from htmlnode import LeafNode,ParentNode
 
 
 def text_node_to_html_node(text_node):
+    
+    #print(text_node.text)
     match text_node.text_type:
         case TextType.TEXT:
             return LeafNode(None,value=text_node.text)
@@ -15,7 +17,7 @@ def text_node_to_html_node(text_node):
         case TextType.LINK:
             return LeafNode('a',value=text_node.text,props={"href":text_node.url})
         case TextType.IMAGE:
-            return LeafNode('img',value='',props={
+            return LeafNode('img',value=' ',props={
                 "src":text_node.url,
                 "alt":text_node.text
             })
